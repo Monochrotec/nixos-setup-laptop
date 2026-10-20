@@ -18,7 +18,7 @@
         ./configuration.nix
       ];
 
-      hjem = {
+      inputs.hjem = {
         clobberByDefault = true;
 
         users.parsa = {
