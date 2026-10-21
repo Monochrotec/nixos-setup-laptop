@@ -136,8 +136,11 @@
     brightnessctl
 
     # basic apps
+    foot
+    nautilus
+    loupe
     celluloid
-    deadbeef
+    rhythmbox
 
     # gtk themming
     nwg-look

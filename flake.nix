@@ -1,6 +1,4 @@
 {
-  description = "NixOS config";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hjem = {
@@ -18,15 +16,18 @@
         ./configuration.nix
       ];
 
-      inputs.hjem = {
-        clobberByDefault = true;
+    };
 
-        users.parsa = {
-          directory = "/home/parsa";
+    inputs.hjem = {
+      clobberByDefault = true;
 
-          xdg.config.files = {
-            "fish".source = ./dotfiles/parsa/fish;
-          };
+      users.parsa = {
+        user = "parsa";
+        directory = "/home/parsa";
+
+        xdg.config.files = {
+          "fish".source = ./dotfiles/parsa/fish;
+          "niri".source = ./dotfiles/parsa/niri;
         };
       };
     };
