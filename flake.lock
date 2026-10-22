@@ -1,22 +1,23 @@
 {
   "nodes": {
-    "hjem": {
+    "home-manager": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1792374494,
-        "narHash": "sha256-E3vrGA6k5Suh2NDP18PO+HTaL5zCQMfGW5toKoVqcQ8=",
-        "owner": "feel-co",
-        "repo": "hjem",
-        "rev": "7fec35f695f1d8784d2485be6871f85dc0d0f522",
+        "lastModified": 1792605213,
+        "narHash": "sha256-J73EBU30r2hXvHCcBtaigQDAIu/GGPYk1nc6P9THcmg=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "ab97a5d09e0f2aa7339cfd35ec5824fd6653e27c",
         "type": "github"
       },
       "original": {
-        "owner": "feel-co",
-        "repo": "hjem",
+        "owner": "nix-community",
+        "ref": "master",
+        "repo": "home-manager",
         "type": "github"
       }
     },
@@ -38,7 +39,7 @@
     },
     "root": {
       "inputs": {
-        "hjem": "hjem",
+        "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"
       }
     }

@@ -1,35 +1,35 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    hjem = {
-      url = "github:feel-co/hjem";
+
+    home-manager = {
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs: {
-    nixosConfigurations.nixos = inputs.nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
-      modules = [
-        inputs.hjem.nixosModules.default
-        ./configuration.nix
-      ];
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }:
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./configuration.nix
+        ];
+      };
 
-    };
+      home-manager = {
+        useUserPackages = true;
+        useGlobalPkgs = true;
+        backupFileExtention = "bak";
 
-    inputs.hjem = {
-      clobberByDefault = true;
-
-      users.parsa = {
-        user = "parsa";
-        directory = "/home/parsa";
-
-        xdg.config.files = {
-          "fish".source = ./dotfiles/parsa/fish;
-          "niri".source = ./dotfiles/parsa/niri;
-        };
+        users.parsa = import ./home/parsa.nix;
       };
     };
-  };
 }
