@@ -108,16 +108,6 @@
     shell = pkgs.fish;
   };
 
-  fonts = {
-    enableDefaultPackages = true;
-
-    packages = with pkgs; [
-      nerd-fonts.jetbrains-mono
-    ];
-
-    fontconfig.enable = true;
-  };
-
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
@@ -125,7 +115,6 @@
     ffmpeg
     pulsemixer
     impala
-    nixfmt
     tokei
     fastfetch
     git
@@ -136,7 +125,6 @@
     brightnessctl
 
     # basic apps
-    foot
     nautilus
     loupe
     celluloid
