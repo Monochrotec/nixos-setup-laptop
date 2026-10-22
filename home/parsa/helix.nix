@@ -15,7 +15,7 @@
     languages.language = [
       {
         name = "nix";
-        autoformat = true;
+        auto-format = true;
         formatter.command = lib.getExe pkgs.nixfmt;
       }
     ];
