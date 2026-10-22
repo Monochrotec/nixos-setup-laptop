@@ -1,13 +1,22 @@
 {
-  config.stylix.targets.helix.enable = false;
+  lib,
+  pkgs,
+  ...
+}:
+
+{
+  stylix.targets.helix.enable = false;
 
   programs.helix = {
     enable = true;
-    language = [
+    settings = {
+      theme = "nord";
+    };
+    languages.language = [
       {
         name = "nix";
         autoformat = true;
-        formatter.command = (lib.getExe pkgs.nixfmt);
+        formatter.command = lib.getExe pkgs.nixfmt;
       }
     ];
   };

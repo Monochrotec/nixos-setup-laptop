@@ -31,7 +31,7 @@
         };
 
         warp-mouse-to-focus = { };
-        focus-follows-mouse._props.max-scroll-amount = "50%";
+        focus-follows-mouse._props.max-scroll-amount = "0%";
       };
 
       output = {
