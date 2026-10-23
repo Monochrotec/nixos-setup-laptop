@@ -90,6 +90,9 @@
   # enabling the fish shell
   programs.fish.enable = true;
 
+  # enabling direnv to stop nixos from wiping my flake dependencies clean
+  programs.direnv.enable = true;
+
   # a simple niri setup
   programs.niri.enable = true;
   programs.noctalia.enable = true;
