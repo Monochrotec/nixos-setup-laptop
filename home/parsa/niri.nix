@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   wayland.windowManager.niri = {
     enable = true;
@@ -56,9 +58,9 @@
         border = {
           width = 2;
 
-          active-color = "#ffc87f";
-          inactive-color = "#505050";
-          urgent-color = "#9b0000";
+          active-color = config.lib.stylix.colors.withHashtag.base07;
+          inactive-color = config.lib.stylix.colors.withHashtag.base01;
+          urgent-color = config.lib.stylix.colors.withHashtag.base08;
         };
       };
 

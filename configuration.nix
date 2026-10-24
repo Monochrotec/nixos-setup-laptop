@@ -93,9 +93,8 @@
   # enabling direnv to stop nixos from wiping my flake dependencies clean
   programs.direnv.enable = true;
 
-  # a simple niri setup
+  # enabling niri so my login manager can detect it.
   programs.niri.enable = true;
-  programs.noctalia.enable = true;
 
   # enabling obs studio for screen recording
   programs.obs-studio.enable = true;
