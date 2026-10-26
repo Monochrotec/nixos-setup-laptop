@@ -15,6 +15,11 @@
         }
       ];
 
+      cursor = {
+        xcursor-theme = "Adwaita";
+        xcursor-size = 24;
+      };
+
       prefer-no-csd = { };
 
       screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
