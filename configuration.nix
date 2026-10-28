@@ -115,6 +115,7 @@
   environment.systemPackages = with pkgs; [
     # basic cli utils
     ffmpeg
+    yt-dlp
     pulsemixer
     impala
     tokei
