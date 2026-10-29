@@ -131,10 +131,7 @@
     nautilus
     loupe
     celluloid
-    rhythmbox
-
-    # gtk themming
-    nwg-look
+    gapless
 
     # some more apps
     blender
@@ -143,6 +140,7 @@
     pixieditor
     tiled
     supertuxkart
+    v2rayn
 
     # icon themes
     adwaita-icon-theme
