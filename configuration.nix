@@ -2,7 +2,12 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
@@ -18,6 +23,9 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Use the latest kernel. this might fix my iem audio
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -48,7 +56,10 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Enable graphics for uhh. graphics ofc.
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
 
   security.rtkit.enable = true;
 
@@ -105,6 +116,7 @@
     description = "Parsa Mokhtari";
     extraGroups = [
       "networkmanager"
+      "audio"
       "wheel"
     ];
     shell = pkgs.fish;
@@ -132,6 +144,7 @@
     loupe
     celluloid
     gapless
+    pavucontrol
 
     # some more apps
     blender
