@@ -7,7 +7,7 @@
       ./niri.nix
       ./noctalia.nix
     ];
-
+    stylix.targets.gtk.flatpakSupport.enable = false;
     home.stateVersion = "26.05";
   };
 }

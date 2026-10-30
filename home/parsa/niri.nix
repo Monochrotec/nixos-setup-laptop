@@ -72,9 +72,11 @@
       hotkey-overlay.skip-at-startup = { };
 
       binds = {
-        "Mod+Return".spawn = "foot";
+        "Mod+Return".spawn = "footclient";
         "Mod+Space".spawn-sh = "noctalia msg panel-open launcher";
         "Mod+V".spawn-sh = "noctalia msg panel-open clipboard";
+
+        F12.fullscreen-window = { };
 
         # audio control
         XF86AudioRaiseVolume = {

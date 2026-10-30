@@ -145,6 +145,7 @@
     celluloid
     gapless
     pavucontrol
+    fractal
 
     # some more apps
     blender
@@ -153,7 +154,6 @@
     pixieditor
     tiled
     supertuxkart
-    v2rayn
 
     # icon themes
     adwaita-icon-theme
