@@ -55,10 +55,22 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
+  # needed for firmware and stuff
+  nixpkgs.config.allowUnfree = true;
+
   # Enable graphics for uhh. graphics ofc.
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
+  hardware = {
+    enableAllFirmware = true;
+
+    bluetooth = {
+      enable = true;
+      powerOnBoot = false;
+    };
+
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
   };
 
   security.rtkit.enable = true;
@@ -154,6 +166,7 @@
     libresprite
     pixieditor
     tiled
+    ldtk
     supertuxkart
 
     # icon themes
