@@ -157,7 +157,6 @@
     celluloid
     gapless
     pavucontrol
-    fractal
     tutanota-desktop
 
     # some more apps
