@@ -13,6 +13,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./network.nix
   ];
 
   nix.settings.experimental-features = [
@@ -30,24 +31,6 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  networking = {
-    useNetworkd = true;
-    hostName = "nixos";
-    wireless = {
-      iwd = {
-        enable = true;
-        settings = {
-          Network = {
-            EnableIPv6 = true;
-          };
-          Settings = {
-            AutoConnect = true;
-          };
-        };
-      };
-    };
-  };
 
   # Set your time zone.
   time.timeZone = "Asia/Tehran";
