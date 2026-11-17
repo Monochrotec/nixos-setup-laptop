@@ -14,6 +14,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./network.nix
+    ./virtualization.nix
   ];
 
   nix.settings.experimental-features = [
@@ -111,6 +112,7 @@
     description = "Parsa Mokhtari";
     extraGroups = [
       "networkmanager"
+      "libvirtd"
       "audio"
       "wheel"
     ];
