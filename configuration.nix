@@ -27,7 +27,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use the latest kernel. this might fix my iem audio
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -123,7 +123,6 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     # basic cli utils
-    usbutils
     ffmpeg
     yt-dlp
     pulsemixer
@@ -152,8 +151,6 @@
     pixieditor
     tiled
     ldtk
-
-    # Games
     supertuxkart
 
     # icon themes
