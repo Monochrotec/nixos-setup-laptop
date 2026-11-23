@@ -28,7 +28,7 @@
         keyboard = {
           xkb = {
             layout = "us,gb";
-            options = "grp:alt_ralt_toggle,ctrl:nocaps";
+            options = "grp:alts_toggle,ctrl:nocaps";
           };
         };
 

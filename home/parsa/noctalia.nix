@@ -4,6 +4,11 @@
 
     settings = {
       bar.default = {
+        start = [
+          "keyboard_layout"
+          "wallpaper"
+          "workspaces"
+        ];
         end = [
           "media"
           "tray"
