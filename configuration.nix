@@ -66,6 +66,8 @@
 
   # Enable/Disable and configure services
   services = {
+    hardware.openrgb.enable = true;
+
     displayManager.ly.enable = true;
 
     power-profiles-daemon.enable = true;
