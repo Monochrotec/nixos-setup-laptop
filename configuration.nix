@@ -10,13 +10,6 @@
 }:
 
 {
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./network.nix
-    ./virtualization.nix
-  ];
-
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -66,8 +59,6 @@
 
   # Enable/Disable and configure services
   services = {
-    hardware.openrgb.enable = true;
-
     displayManager.ly.enable = true;
 
     power-profiles-daemon.enable = true;

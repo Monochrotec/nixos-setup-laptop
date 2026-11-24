@@ -26,9 +26,15 @@
         system = "x86_64-linux";
         specialArgs = { inherit self; };
         modules = [
-          ./modules/configuration.nix
-          ./modules/stylix.nix
-          ./modules/home/parsa
+          ./hardware-configuration.nix
+          ./configuration.nix
+
+          ./home/parsa
+
+          ./modules/network.nix
+          ./modules/virtualization.nix
+          ./modules/stylix
+          ./modules/rgb
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
           {
