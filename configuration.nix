@@ -137,6 +137,7 @@
     gapless
     pavucontrol
     tutanota-desktop
+    fluffychat
 
     # some more apps
     blender
